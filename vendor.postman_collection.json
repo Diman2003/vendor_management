@@ -1,0 +1,357 @@
+{
+	"info": {
+		"_postman_id": "4970ba02-d886-4cdd-afb6-0820ab33b8e8",
+		"name": "vendor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25323490",
+		"_collection_link": "https://red-star-387536.postman.co/workspace/Livery~ff537166-0a69-4aeb-bf22-720626ca7506/collection/25323490-4970ba02-d886-4cdd-afb6-0820ab33b8e8?action=share&source=collection_link&creator=25323490"
+	},
+	"item": [
+		{
+			"name": "vendor-list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/vendor/api/vendors/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"vendor",
+						"api",
+						"vendors",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-vendor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": 3,\n        \"name\": \"Vendor c\",\n        \"contact_details\": \"Contact details for Vendor C\",\n        \"address\": \"Address for Vendor C\",\n        \"vendor_code\": \"VENDOR-C-CODE\",\n        \"on_time_delivery_rate\": 90.0,\n        \"quality_rating_avg\": 4.5,\n        \"average_response_time\": 36000.0,\n        \"fulfillment_rate\": 97.0\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/vendor/api/vendors/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"vendor",
+						"api",
+						"vendors",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "detail-vender",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/vendor/api/vendors/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"vendor",
+						"api",
+						"vendors",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-vendor",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"name\": \"Vendor AA\",\n    \"contact_details\": \"Contact details for Vendor A\",\n    \"address\": \"Address for Vendor A\",\n    \"vendor_code\": \"VENDOR-A-CODE\",\n    \"on_time_delivery_rate\": 85.0,\n    \"quality_rating_avg\": 4.2,\n    \"average_response_time\": 43200.0,\n    \"fulfillment_rate\": 95.0\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/vendor/api/vendors/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"vendor",
+						"api",
+						"vendors",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-vendor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/vendor/api/vendors/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"vendor",
+						"api",
+						"vendors",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create PO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"id\": 1,\n        \"po_number\": \"PO-001\",\n        \"vendor\": 1,\n        \"order_date\": \"2024-04-30T08:00:00Z\",\n        \"delivery_date\": \"2024-05-10T08:00:00Z\",\n        \"items\": {},\n        \"quantity\": 100,\n        \"status\": \"completed\",\n        \"quality_rating\": 4.5,\n        \"issue_date\": \"2024-04-30T08:00:00Z\",\n        \"acknowledgment_date\": \"2024-04-30T09:00:00Z\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/vendor/api/purchase_orders/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"vendor",
+						"api",
+						"purchase_orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list PO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/vendor/api/purchase_orders/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"vendor",
+						"api",
+						"purchase_orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PO detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/vendor/api/purchase_orders/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"vendor",
+						"api",
+						"purchase_orders",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update PO",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"po_number\": \"PO-011\",\n    \"vendor\": 1,\n    \"order_date\": \"2024-04-30T08:00:00Z\",\n    \"delivery_date\": \"2024-05-10T08:00:00Z\",\n    \"items\": {},\n    \"quantity\": 100,\n    \"status\": \"completed\",\n    \"quality_rating\": 4.5,\n    \"issue_date\": \"2024-04-30T08:00:00Z\",\n    \"acknowledgment_date\": \"2024-04-30T09:00:00Z\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/vendor/api/purchase_orders/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"vendor",
+						"api",
+						"purchase_orders",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del PO",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/vendor/api/purchase_orders/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"vendor",
+						"api",
+						"purchase_orders",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VD PO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/vendor/api/vendors/1/performance/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"vendor",
+						"api",
+						"vendors",
+						"1",
+						"performance",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PO Akngmt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/vendor/api/purchase_orders/1/acknowledge/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"vendor",
+						"api",
+						"purchase_orders",
+						"1",
+						"acknowledge",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
